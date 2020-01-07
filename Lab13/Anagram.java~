@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Anagram{
+  
+  public static void main (String[] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter first phrase");
+    
+    String a = sc.nextLine(); 
+    
+    System.out.println("Enter second phrase");
+    String b = sc.nextLine(); 
+
+    
+    System.out.println(anagram(b) + " are the letters of " + b +  " in order");
+    System.out.println(anagram(a) + " are the letters of " + a +  " in order");
+    
+    if(anagram(a).equals(anagram(b))){
+      System.out.println(a + " is an anagram of " + b);
+    }
+    
+  }  
+  public static String anagram(String input){
+    String lower = input.toLowerCase();
+    String s = "";
+    
+    for (char c ='a'; c <= 'z'; c++) {
+      for(int i = 0; i < lower.length(); i++){
+        if(lower.charAt(i) == c){
+          s += lower.charAt(i);
+        }
+        }
+    
+    }
+    return s;
+}
+}
+
+
+

@@ -1,0 +1,43 @@
+import javax.swing.*;
+import java.awt.*;
+/**
+ Pie.java
+ Support class provided for Part 2, Lab5, COMP160 2019 
+ */
+public class Pie extends JPanel{
+    /** constructor method, sets up the Pie panel */
+  public Pie(){
+    setPreferredSize(new Dimension(300,300));
+    setBackground(Color.white);
+  }
+ 
+    
+    /** all drawing code goes in the paint method, which is called automatically*/
+    public void paintComponent (Graphics page){
+      super.paintComponent(page);
+      //your pie chart code goes here - you MUST use local variables as described in the lab book
+      page.setColor (Color.cyan);
+      page.fillArc(10, 10, 250, 250, 0, -45);
+      
+      page.setColor (Color.blue);
+      page.fillArc(10, 10, 250, 250, -45, -45);
+      
+      page.setColor (Color.green);
+      page.fillArc(10, 10, 250, 250, -90, -45);
+      
+      page.setColor (Color.yellow);
+      page.fillArc(10, 10, 250, 250, -135, -45);
+      
+      page.setColor (Color.orange);
+      page.fillArc(10, 10, 250, 250, -180, -45);
+      
+      page.setColor (Color.red);
+      page.fillArc(10, 10, 250, 250, - 225, -45);
+      
+      page.setColor (Color.black);
+      page.fillArc(10, 10, 250, 250, -270, -45);
+      
+      page.setColor (Color.magenta);
+      page.fillArc(20, 5, 250, 250, -315, -45);
+    }
+}

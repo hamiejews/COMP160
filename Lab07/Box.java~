@@ -1,0 +1,71 @@
+/** Lab07 Box class 
+  * Tom Valentine August 2019
+  */
+
+public class Box{ /** defining the class */
+  /** defining the variables */
+  private int height;
+  private int width;
+  private int length;
+  static String owner;
+  
+  /** mutator methods */
+  
+  static void setOwner(String o){
+    owner = o;
+  }
+  
+  public void setHeight(int h){
+    height = h;
+  }
+  
+  public void setWidth(int w){
+    width = w;
+  }
+  
+  public void setLength(int l){
+    length = l;
+  }
+  
+  /** accessor methods */
+  
+  public int getSurfaceArea(){
+    return (2*(length*height))+(2*(length*width))+(2*(height*width));
+  }
+  
+  public int getVolume(){
+    return length*height*width;
+  }
+  
+  static String getOwner(){
+    return owner;
+  }
+  
+  /** toString method */
+  
+  public String toString(){
+    return "The height is " + height + ", the width is " + width + ", the length is " + length + ", the volume is " + getVolume() + ", the surface area is " + getSurfaceArea() + " and the owner's name is " + getOwner();
+  }
+  
+  Box(){
+    height = 0;
+    length = 0;
+    width = 0;
+  }
+  
+  Box(int h, int w, int l){
+    height = h;
+    length = l;
+    width = w;
+  }
+  
+  Box(int side){
+    length = side;
+    height = side;
+    width = side;
+  }
+}
+  
+  
+  
+    

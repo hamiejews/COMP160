@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+public class IntCounter {
+  
+   private int[] numArray;
+   
+/* intCounter method  */
+   
+   public IntCounter(int[] numArray){
+      this.numArray = numArray;
+     for( int i= 0; i < numArray.length; i++ ) {     
+         System.out.print(numArray[i] + " ");
+      }                                                      
+      System.out.println("Array is of length " + numArray.length);
+   }
+   
+/* method which checks whether the target int is found in the array */
+   
+   public void showTarget (int target){
+      
+      int count = 0;
+      for( int i = 0; i < numArray.length; i++ ) {
+         if( numArray[i] == target) {
+            System.out.println("\tThere is a " + target + " in position " + i);
+            count ++;
+         }
+      }
+      
+      if (count == 0) {
+         System.out.println("\tThere are no " + target + "'s in this array");
+      }
+      System.out.println();
+   }   
+} 
+
+

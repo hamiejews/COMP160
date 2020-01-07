@@ -1,0 +1,7 @@
+import(java.Scanner)
+
+public class ReadInt{
+  
+  public static void main(String[]args){
+    
+    
