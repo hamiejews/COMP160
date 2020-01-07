@@ -1,0 +1,21 @@
+public class MultiplicationTable{
+  
+  public static void main(String[]args){
+    
+    int rows = 12;
+    int cols = 12;
+    int table[][] = new int[rows][cols];
+    
+    for(int rowInt = 1; rowInt <= rows; rowInt++){ 
+      for(int colInt = 1; colInt <= cols; colInt++){
+        table[rowInt-1][colInt-1] = rowInt * colInt;
+      }
+    }
+    for(int [] rowInt: table) {
+      for(int x: rowInt) {
+        System.out.print(x + "\t"); 
+      }
+      System.out.println();
+    }
+  }
+}
