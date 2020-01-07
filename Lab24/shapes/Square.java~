@@ -1,0 +1,11 @@
+package shapes;
+import java.awt.*;
+
+public class Square extends Shape{
+  
+  /** display abstract method for setting the colour and size of object */
+  public void display (Graphics g) {
+    g.setColor(colour);
+    g.fillOval(x, y, width, height);
+  }
+}

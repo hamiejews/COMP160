@@ -1,0 +1,8 @@
+import java.awt.*
+
+public class Circle extends Shape{
+  
+  /** display abstract method for setting the colour and size of object */
+  public abstract void display (Graphics g);
+  
+  
